@@ -19,15 +19,25 @@ footer: Rich Burroughs @richburroughs
 
 ---
 
-## orchestration + remote execution
+### library and command-line tool
 
 ---
 
-## Similar to Ansible and Capistrano
+### application deployment or systems administration tasks
 
 ---
 
-## Why Fabric?
+### orchestration + remote execution
+
+---
+
+### Similar to Ansible and Capistrano
+
+^ Ansible is popular, supports facts
+
+---
+
+### Why Fabric?
 
 ^ ease of use
 ^ only requires sshd and Python on your laptop
@@ -37,6 +47,6 @@ footer: Rich Burroughs @richburroughs
 
 ---
 
-## Why not mcollective?
+### Why not mcollective?
 
 ---
