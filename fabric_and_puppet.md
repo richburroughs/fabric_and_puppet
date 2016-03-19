@@ -10,7 +10,7 @@ footer: Rich Burroughs @richburroughs
 
 ---
 
-![inline](fabfile_org.png)
+![inline](images/fabfile_org.png)
 
 ---
 
