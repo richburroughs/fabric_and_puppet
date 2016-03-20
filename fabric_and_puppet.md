@@ -49,4 +49,62 @@ footer: Rich Burroughs @richburroughs
 
 ### Why not mcollective?
 
+^ it has to be installed
+^ middleware can hose up
+^ sshd is everywhere
+^ puppet labs even heading in a different direction
+
+---
+
+### Fabric functions AKA Operations
+
+---
+
+### run sudo local get put reboot
+
+---
+
+``` Python
+    def deploy():
+        local('git push')
+        run('git pull')
+        sudo('puppet agent -t')
+```
+
+---
+
+### functions are building blocks
+
+---
+
+### tasks
+
+---
+
+``` Python
+    @task
+    def foo():
+        sudo('foo')
+```
+
+---
+
+### fabfiles
+
+---
+
+### env
+
+---
+
+### fab command
+
+---
+
+### authentication
+
+---
+
+### roles
+
 ---
