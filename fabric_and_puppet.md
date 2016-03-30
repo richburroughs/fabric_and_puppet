@@ -1,4 +1,4 @@
-footer: Rich Burroughs @richburroughs
+footer: @richburroughs
 
 ## Fabric and Puppet
 
