@@ -65,10 +65,10 @@ footer: Rich Burroughs @richburroughs
 ---
 
 ``` Python
-    def deploy():
-        local('git push')
-        run('git pull')
-        sudo('puppet agent -t')
+      def deploy():
+          local('git push')
+          run('git pull')
+          sudo('puppet agent -t')
 ```
 
 ---
@@ -82,9 +82,9 @@ footer: Rich Burroughs @richburroughs
 ---
 
 ``` Python
-    @task
-    def foo():
-        sudo('foo')
+      @task
+      def foo():
+          sudo('foo')
 ```
 
 ---
@@ -101,7 +101,21 @@ footer: Rich Burroughs @richburroughs
 
 ---
 
+``` Bash
+
+      fab -H host.example.com task
+```
+
+---
+
 ### authentication
+
+---
+
+``` Bash
+
+      fab -I -H host.example.com task
+```
 
 ---
 
