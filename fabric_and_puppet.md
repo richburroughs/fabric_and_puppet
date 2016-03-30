@@ -128,9 +128,10 @@ footer: @richburroughs
         return lambda:[y for x in roles for y in env.roledefs[x]]
 
     env.roledefs = {
-        'web': ['agent1'],
-        'db': ['agent2'],
-        'all': get_roles('web', 'db')
+        'web': ['web1', 'web2', 'web3'],
+        'db': ['db1', 'db2'],
+        'amq': ['mq1', 'mq2']
+        'all': get_roles('web', 'db', 'amq')
     }
 ```
 
@@ -150,7 +151,7 @@ footer: @richburroughs
 
 ``` Bash
 
-      fab -I -H host.example.com agent_run:environment=rich
+      fab -I -R web agent_run:environment=rich
 ```
 
 ---
