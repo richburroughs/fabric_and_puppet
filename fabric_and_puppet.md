@@ -65,10 +65,10 @@ footer: Rich Burroughs @richburroughs
 ---
 
 ``` Python
-      def deploy():
-          local('git push')
-          run('git pull')
-          sudo('puppet agent -t')
+    def deploy():
+        local('git push')
+        run('git pull')
+        sudo('puppet agent -t')
 ```
 
 ---
@@ -82,9 +82,9 @@ footer: Rich Burroughs @richburroughs
 ---
 
 ``` Python
-      @task
-      def foo():
-          sudo('foo')
+    @task
+    def foo():
+        sudo('foo')
 ```
 
 ---
@@ -122,3 +122,37 @@ footer: Rich Burroughs @richburroughs
 ### roles
 
 ---
+
+``` Python
+    def get_roles(*roles):
+        return lambda:[y for x in roles for y in env.roledefs[x]]
+
+    env.roledefs = {
+        'web': ['agent1'],
+        'db': ['agent2'],
+        'all': get_roles('web', 'db')
+    }
+```
+
+---
+
+### parameters
+
+---
+
+``` Python
+    @task
+    def agent_run(environment='production'):
+        sudo("/usr/local/bin/puppet agent -t --environment=%s" % environment)
+```
+
+---
+
+``` Bash
+
+      fab -I -H host.example.com agent_run:environment=rich
+```
+
+---
+
+### demo time
