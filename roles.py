@@ -8,5 +8,6 @@ def get_roles(*roles):
 env.roledefs = {
         'web': ['agent1'],
         'db': ['agent2'],
-        'all': get_roles('web', 'db')
+	'master': ['master'],
+        'all': get_roles('web', 'db', 'master')
 }
