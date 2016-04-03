@@ -62,5 +62,5 @@ def set_role(my_role='base'):
 @task
 def fact_test():
     role = sudo("/usr/local/bin/facter role")
-    if role == "vagrant":
+    if role == "web":
         sudo("/usr/local/bin/puppet agent -t")
