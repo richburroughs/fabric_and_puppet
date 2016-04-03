@@ -53,3 +53,9 @@ def server():
 def get_role():
     sudo("/usr/local/bin/facter role")
 
+# Testing facts
+@task
+def fact_test():
+    role = sudo("/usr/local/bin/facter role")
+    if role == "vagrant":
+        sudo("/usr/local/bin/puppet agent -t")
