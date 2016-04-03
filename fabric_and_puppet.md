@@ -157,3 +157,7 @@ footer: @richburroughs
 ---
 
 ### demo time
+
+---
+
+### conclusions
