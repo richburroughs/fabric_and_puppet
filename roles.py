@@ -9,6 +9,6 @@ env.roledefs = {
         'web': ['agent1', 'agent2', 'agent3'],
         'db': ['agent4'],
         'haproxy': ['agent5'],
-        'master': ['master'],
-        'all': get_roles('web', 'db', 'haproxy', 'master')
+        'puppet': ['master'],
+        'all': get_roles('web', 'db', 'haproxy', 'puppet')
 }
