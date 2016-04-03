@@ -6,8 +6,9 @@ def get_roles(*roles):
     return lambda:[y for x in roles for y in env.roledefs[x]]
 
 env.roledefs = {
-        'web': ['agent1'],
-        'db': ['agent2'],
-	'master': ['master'],
-        'all': get_roles('web', 'db', 'master')
+        'web': ['agent1', 'agent2', 'agent3'],
+        'db': ['agent4'],
+        'haproxy': ['agent5'],
+        'master': ['master'],
+        'all': get_roles('web', 'db', 'haproxy', 'master')
 }
