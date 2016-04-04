@@ -44,6 +44,10 @@ footer: @richburroughs
 ^ extensible - writing Python code
 ^ out of band of your Puppet infrastructure
 
+---
+
+> I suppose it is tempting, if the only tool you have is a hammer, to treat everything as if it were a nail.
+-- Abraham Maslow
 
 ---
 
