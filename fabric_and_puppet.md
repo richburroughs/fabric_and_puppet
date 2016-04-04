@@ -156,6 +156,17 @@ footer: @richburroughs
 
 ---
 
+### ad hoc commands
+
+---
+
+``` Bash
+
+      fab -I -R all -- '/bin/ls /'
+```
+
+---
+
 ### demo time
 
 ---
