@@ -53,7 +53,7 @@ def server():
 def get_role():
     sudo("/usr/local/bin/facter role")
 
-# Run facter and list the role fact
+# Set an external role fact
 @task
 def set_role(my_role='base'):
     sudo("echo 'role=%s' > /etc/puppetlabs/facter/facts.d/role.txt" % my_role)
